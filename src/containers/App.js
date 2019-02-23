@@ -5,7 +5,9 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <SearchBar />
+      <div className='ui container searchbar'>
+        <SearchBar />
+      </div>
     );  
   }
 }
