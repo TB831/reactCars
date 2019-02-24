@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       term: ''
     }
@@ -10,6 +10,7 @@ class SearchBar extends Component {
 
   onFormSubmit = (e) => {
     e.preventDefault(); // Keeps form from submitting
+    this.props.onSubmit(this.state.term);
   }
 
   render() {
