@@ -1,9 +1,10 @@
 import React from 'react';
+import './ImageList.css';
 
 const renderImages = (images) => {
-  return images.map((image, i) => {
+  return images.map(image => {
     return (
-      <div key={i}>
+      <div key={image.id}>
         <img alt={image.description} src={image.urls.regular} />
         <p>{image.description}</p>
       </div>
@@ -14,10 +15,8 @@ const renderImages = (images) => {
 const ImageList = (props) => {
   const { images } = props;
 
-
-
   return (
-    <div>
+    <div className='image-list'>
       {renderImages(images)}
     </div>
   );
