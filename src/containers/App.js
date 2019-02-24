@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import SearchBar from '../components/SearchBar';
+import ImageList from '../components/ImageList';
 import './App.css';
 
 const UNSPLASH_ACCESS_KEY = process.env.REACT_APP_UNSPLASH_ACCESS_KEY;
@@ -32,7 +33,7 @@ class App extends Component {
     return (
       <div className='ui container searchbar'>
         <SearchBar onSubmit={this.onSearchSubmit} />
-        Images: {images.length}
+        <ImageList images={images} />
       </div>
     );  
   }
