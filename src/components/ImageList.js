@@ -7,8 +7,8 @@ const renderImages = (images) => {
     return (
       <ImageCard
         key={image.id} 
-        alt={image.description} 
-        src={image.urls.regular}
+        description={image.description} 
+        url={image.urls.regular}
         />
     )
   })
